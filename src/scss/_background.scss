@@ -1,0 +1,89 @@
+/* aurora background */
+.aurora {
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -100;
+  animation-name: aurora-lights;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background: linear-gradient(
+    0deg,
+    rgba(45, 154, 187, 1),
+    rgba(53, 222, 206, 1),
+    rgba(71, 255, 191, 1),
+    rgba(131, 42, 208, 1),
+    rgba(60, 36, 156, 1),
+    rgba(27, 22, 65, 1) 65%
+  );
+}
+
+@keyframes aurora-lights {
+  0% {
+    transform: translate(5%, -2%);
+  }
+
+  25% {
+    transform: translate(10%, 7%);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    transform: translate(7%, -2%);
+  }
+
+  85% {
+    transform: translate(6%, 3%) rotate(12deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+/* stars */
+$star-number: 200;
+$current-stars: 1;
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+  z-index: -99;
+
+  //count down from the number of stars
+  @while $star-number > 0 {
+    /* with each iteration, concat string with another box-shadow declaration. set random position for box shadow and random size */
+    $current-stars: $current-stars +
+      (random(100) + vw)
+      (random(75) + vh)
+      0
+      (random(2) + px)
+      rgba(188, 202, 255, 0.7) +
+      unquote(", ");
+
+    @if $star-number == 1 {
+      $current-stars: $current-stars +
+        (random(100) + vw)
+        (random(100) + vh)
+        0
+        0
+        rgba(255, 255, 255, 0.9);
+      box-shadow: $current-stars;
+    }
+    // count down by removing 1 for each iteration
+    $star-number: $star-number - 1;
+  }
+}

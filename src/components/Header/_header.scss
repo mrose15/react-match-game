@@ -1,0 +1,40 @@
+.game {
+  &__header {
+    width: 100%;
+    position: relative;
+  }
+
+  &__logo {
+    width: 10em;
+    height: auto;
+    margin: 1rem 0 0 2rem;
+    @media only screen and (min-width: 576px) {
+      margin: 1rem auto 0;
+    }
+  }
+  &__score-wrap {
+    position: absolute;
+    top: 1rem;
+    right: 8%;
+  }
+
+  &__score {
+    display: grid;
+    grid-template-columns: 36% fit-content(40%) 25%;
+    align-items: center;
+    color: $primary-btn-font-color;
+    font-size: 1.2rem;
+    column-gap: 0.3rem;
+    margin-top: 1rem;
+    background-color: $score-bgcolor;
+    border-radius: 0.3rem;
+    line-height: $half-height;
+    &--text {
+      font-size: 0.9rem;
+    }
+
+    img {
+      width: 3rem;
+    }
+  }
+}

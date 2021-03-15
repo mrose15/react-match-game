@@ -1,0 +1,18 @@
+/** Global **/
+@import "./scss/_variables.scss";
+@import "./scss/_mixins.scss";
+@import "./scss/_global.scss";
+@import "./scss/_background.scss";
+
+/** Components **/
+/* Button Component */
+@import "./components/Button/_button.scss";
+
+/* Header Component */
+@import "./components/Header/_header.scss";
+
+/* Game Component */
+@import "./components/GameBoard/_gameboard.scss";
+
+/* Card Component */
+@import "./components/Card/_card.scss";

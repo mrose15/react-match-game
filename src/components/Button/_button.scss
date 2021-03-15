@@ -1,0 +1,26 @@
+/* buttons */
+.btn {
+  border-radius: 0.3rem;
+  border-style: none;
+  transition: all 0.25s linear;
+  box-shadow: 2px 2px 2px 0 $btn-shadow;
+  cursor: pointer;
+
+  &--primary {
+    background-color: $primary-btn-color;
+    color: $primary-btn-font-color;
+    &:hover {
+      background-color: $primary-hover-btn-color;
+    }
+  }
+
+  &--lg {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  &--sm {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+}

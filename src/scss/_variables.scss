@@ -1,0 +1,34 @@
+/*** Variables ***/
+
+/** Colors Declared **/
+$black: #000;
+$white: #fff;
+$light-purple: #8840bb;
+$medium-purple: #7738a4;
+$deep-purple: #5f2d83;
+$teal-opacity: rgba(0, 255, 231, 0.7);
+
+/** Colors Defined **/
+/* font colors */
+$primary-font-color: $black;
+
+/* bg colors */
+$score-bgcolor: $teal-opacity;
+
+/* button colors */
+$primary-btn-color: $medium-purple;
+$primary-btn-font-color: $white;
+$primary-hover-btn-color: $light-purple;
+$btn-shadow: $deep-purple;
+
+/** Font Sizing **/
+$base-font-size: 14;
+$line-height-px: 21;
+
+//Calculates rem from pixel input
+@function rem($px: $line-height-px, $font-size: $base-font-size) {
+  @return $px / $font-size * 1rem;
+}
+
+/* line height */
+$half-height: rem(14);
