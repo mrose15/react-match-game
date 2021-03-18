@@ -1,3 +1,8 @@
+#### React Matching Game
+- There are more than likely better ways to go about building this. This was my first pass at building a react game app.
+- I could have made better use of props, state and refs to build this game instead of referencing the DOM. However, those concepts are still new to me and I don't yet fully understand how best to use them.
+- I know there's duplicated code in here, which goes against DRY principles but being conscious of time spent on this project, I built this to the best of my current abilities
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
